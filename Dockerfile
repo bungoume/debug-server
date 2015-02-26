@@ -12,6 +12,6 @@ COPY . /usr/src/app
 
 RUN python debug_server/manage.py collectstatic --noinput
 
-EXPOSE 8000
+EXPOSE 80
 
 CMD ["uwsgi", "uwsgi.ini"]
