@@ -1,3 +1,4 @@
+import os
 import uuid
 import pytz
 from datetime import datetime
@@ -15,6 +16,7 @@ def index(request):
         if k.startswith(('SERVER_', 'HTTP_', 'REMOTE_')):
             meta[k.lower()] = v
     res = {
+        'hostname': os.getenv('HOSTNAME'),
         'uuid': str(uuid.uuid4()),
         'datetime': datetime.now(jst).isoformat(),
         'get': dict(request.GET),
