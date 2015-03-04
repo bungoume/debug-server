@@ -21,6 +21,7 @@ def index(request):
 
     res = {
         'hostname': os.getenv('HOSTNAME'),
+        'appname': os.getenv('APPNAME'),
         'uuid': str(uuid.uuid4()),
         'datetime': datetime.now(jst).isoformat(),
         'get': dict(request.GET),
