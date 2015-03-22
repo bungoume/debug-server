@@ -6,3 +6,8 @@ debug-server
 [![License](http://img.shields.io/:license-MIT-blue.svg)](LICENSE)
 
 return server_name, network_route and request_header retortion
+
+
+## Install
+### Deploy to Heroku
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
