@@ -1,0 +1,5 @@
+[report]
+include = debug_server/**
+omit =
+    debug_server/*/tests/**
+    debug_server/*/tests.py
