@@ -9,6 +9,11 @@
         "DJANGO_SECRET_KEY": {
             "description": "A randomly generated secret to secure your Django installation",
             "generator": "secret"
+        },
+        "APPNAME": {
+            "description": "Your memo. This value only used at the return json's appname value.",
+            "value": "my debug-server",
+            "required": false
         }
     }
 }
