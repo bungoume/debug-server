@@ -1,3 +1,2 @@
 Django==1.7.7
-whitenoise==1.0.6
 pytz
