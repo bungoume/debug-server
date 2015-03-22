@@ -1,0 +1,14 @@
+{
+    "name": "debug-server",
+    "description": "WebApp for Proxy Test(Load Balancer, Cache). This app return the Request(JSON).",
+    "logo": "https://raw.githubusercontent.com/bungoume/debug-server/master/cone-icon.png",
+    "repository": "https://github.com/bungoume/debug-server",
+    "keywords": ["debug", "webserver"],
+    "success_url": "/",
+    "env": {
+        "DJANGO_SECRET_KEY": {
+            "description": "A randomly generated secret to secure your Django installation",
+            "generator": "secret"
+        }
+    }
+}
