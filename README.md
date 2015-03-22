@@ -17,16 +17,16 @@ https://debug-server.herokuapp.com/
 
 * Attention: Heroku has http proxy and it add optional HTTP Header and change port.
 
-### Sample
+### Sample Response
 ```
-$ http -v https://debug-server.herokuapp.com/ X-My-Delivery-id:"c3f8aa3a-c886-4499-9d6e-ee29ee477c34"
+$ http -v https://debug-server.herokuapp.com/ X-My-Delivery-Id:"c3f8aa3a-c886-4499-9d6e-ee29ee477c34"
 GET / HTTP/1.1
 Accept: */*
 Accept-Encoding: gzip, deflate
 Connection: keep-alive
 Host: debug-server.herokuapp.com
 User-Agent: HTTPie/0.9.2
-X-My-Delivery-id: c3f8aa3a-c886-4499-9d6e-ee29ee477c34
+X-My-Delivery-Id: c3f8aa3a-c886-4499-9d6e-ee29ee477c34
 
 
 
