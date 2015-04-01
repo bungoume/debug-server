@@ -23,8 +23,6 @@ SECRET_KEY = 'nxo_1n7ny)8av+hkuf73q@#86yzclolw2%n9r0-xm-#hc^s7^b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-TEMPLATE_DEBUG = True
-
 ALLOWED_HOSTS = []
 
 
@@ -50,9 +48,26 @@ MIDDLEWARE_CLASSES = (
     # 'django.contrib.auth.middleware.AuthenticationMiddleware',
     # 'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'django.middleware.security.SecurityMiddleware',
 )
 
 ROOT_URLCONF = 'debug_server.urls'
+
+# TEMPLATES = [
+#     {
+#         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+#         'DIRS': [],
+#         'APP_DIRS': True,
+#         'OPTIONS': {
+#             'context_processors': [
+#                 'django.template.context_processors.debug',
+#                 'django.template.context_processors.request',
+#                 'django.contrib.auth.context_processors.auth',
+#                 'django.contrib.messages.context_processors.messages',
+#             ],
+#         },
+#     },
+# ]
 
 WSGI_APPLICATION = 'debug_server.wsgi.application'
 
