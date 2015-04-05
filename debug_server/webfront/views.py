@@ -2,13 +2,10 @@ import json
 import logging
 import os
 import uuid
-import pytz
-from datetime import datetime
-
+from django.utils import timezone
 from django.http import JsonResponse
 
 
-jst = pytz.timezone('Asia/Tokyo')
 logger = logging.getLogger(__name__)
 
 
@@ -33,7 +30,7 @@ def index(request):
         'hostname': os.getenv('HOSTNAME'),
         'appname': os.getenv('APPNAME'),
         'uuid': str(uuid.uuid4()),
-        'datetime': datetime.now(jst).isoformat(),
+        'datetime': timezone.localtime(timezone.now()).isoformat(),
         'get': dict(request.GET),
         'post': dict(request.POST),
         'body': body,
