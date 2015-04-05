@@ -6,4 +6,5 @@ ALLOWED_HOSTS = ['*']
 DEBUG = False
 TEMPLATE_DEBUG = False
 
-SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY') or SECRET_KEY
+TIME_ZONE = os.environ.get('TIME_ZONE') or TIME_ZONE

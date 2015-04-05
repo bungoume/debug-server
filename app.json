@@ -14,6 +14,10 @@
             "description": "Your memo. This value only used at the return json's appname value.",
             "value": "my debug-server",
             "required": false
+        },
+        "TIME_ZONE": {
+            "description": "Response datetime timezone.",
+            "value": "UTC"
         }
     }
 }
