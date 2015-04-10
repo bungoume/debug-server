@@ -18,7 +18,7 @@ def index(request):
     except UnicodeDecodeError as e:
         logger.warn('faild to load body as utf-8. %s', e)
         try:
-            body = json.loads(request.body.decode('utf-8', 'replace'))
+            body = request.body.decode('utf-8', 'replace')
         except:
             body = None
 
