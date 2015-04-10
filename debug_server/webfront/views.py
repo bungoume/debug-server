@@ -20,6 +20,7 @@ def index(request):
         try:
             body = request.body.decode('utf-8', 'replace')
         except:
+            logger.warn('faild to load body as utf-8(replace). %s', e)
             body = None
 
     for k, v in request.META.items():
@@ -45,7 +46,8 @@ def index(request):
     try:
         body_json = json.loads(body)
         res['body_json'] = body_json
-    except:
+    except (TypeError, ValueError) as e:
+        logger.debug('faild to load as json. %s', e)
         pass
 
     return JsonResponse(res)
