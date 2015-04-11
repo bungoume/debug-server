@@ -14,12 +14,13 @@ class TestIndex(TestCase):
         res_data = json.loads(res.content.decode())
         self.assertEqual(res_data['get']['param1'], ['test_param'])
 
-    def test_non_unicode_body(self):
+    def test_non_utf8_body(self):
         body = "foo".encode('utf-16')
         res = self.client.post(self._getTargetURL(), body, content_type="text/plain")
         self.assertEqual(res.status_code, 200)
         res_data = json.loads(res.content.decode())
         self.assertEqual(res_data['body'], None)
+        self.assertNotIn('body_json', res_data)
 
     def test_json_body(self):
         body = json.dumps({'data': 'sample'})

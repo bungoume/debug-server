@@ -17,11 +17,7 @@ def index(request):
         body = request.body.decode('utf-8')
     except UnicodeDecodeError as e:
         logger.warn('faild to load body as utf-8. %s', e)
-        try:
-            body = request.body.decode('utf-8', 'replace')
-        except:
-            logger.warn('faild to load body as utf-8(replace). %s', e)
-            body = None
+        body = None
 
     for k, v in request.META.items():
         if k.startswith(('SERVER_', 'HTTP_', 'REMOTE_')):
