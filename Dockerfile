@@ -4,4 +4,4 @@ RUN pip install uWSGI
 
 EXPOSE 80
 
-CMD ["uwsgi", "uwsgi.ini"]
+CMD ["uwsgi", "--ini", "uwsgi.ini:production"]
