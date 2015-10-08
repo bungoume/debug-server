@@ -14,7 +14,7 @@ return server_name, network_route and request_header retortion
 WebApp for Proxy Test(Load Balancer, Cache). This app return the Request(JSON).
 
 ## Demo
-https://debug-server.herokuapp.com/
+http://debug-server.umeice.com/
 
 * Attention: Heroku has http proxy and it add optional HTTP Header and change port.
 
