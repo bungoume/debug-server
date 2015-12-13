@@ -1,7 +1,9 @@
 from django.conf.urls import url
+from webfront import views as webfront_views
+
 
 urlpatterns = [
-    url(r'', 'webfront.views.index', name='index')
+    url(r'', webfront_views.index, name='index')
 ]
 
 handler400 = 'webfront.views.handler400'
