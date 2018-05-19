@@ -3,7 +3,7 @@ debug-server
 
 [![Circle CI](https://circleci.com/gh/bungoume/debug-server.svg?style=shield)](https://circleci.com/gh/bungoume/debug-server)
 [![Coverage Status](https://img.shields.io/coveralls/bungoume/debug-server.svg)](https://coveralls.io/r/bungoume/debug-server)
-[![Dependency Status](https://gemnasium.com/bungoume/debug-server.svg)](https://gemnasium.com/bungoume/debug-server)
+[![Requirements Status](https://requires.io/github/bungoume/debug-server/requirements.svg?branch=update)](https://requires.io/github/bungoume/debug-server/requirements/?branch=update)
 [![License](http://img.shields.io/:license-MIT-blue.svg)](LICENSE)
 
 return server_name, network_route and request_header retortion
