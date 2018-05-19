@@ -1,0 +1,40 @@
+version: 2
+jobs:
+  test:
+    working_directory: ~/myapp
+    docker:
+      - image: circleci/python:3.6.5
+    steps:
+      - checkout
+      - run:
+          command: python -m venv env
+      - restore_cache:
+          keys:
+            - v1-myapp-{{ checksum "requirements.txt" }}
+      - run:
+          name: Run tox
+          command: |
+            . env/bin/activate
+            pip install -U tox
+            tox
+      - run:
+          name: Run coveralls
+          command: |
+            . env/bin/activate
+            pip install -U coveralls
+            coveralls
+      - save_cache:
+          key: v1-myapp-{{ checksum "requirements.txt" }}
+          paths:
+            - ~/myapp/.tox
+            - ~/myapp/env
+      - store_artifacts:
+          path: .circle_artifacts
+      - store_test_results:
+          path: .circle_test_reposts/django
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test
