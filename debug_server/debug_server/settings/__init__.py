@@ -19,6 +19,8 @@ BASE_DIR = dirname(dirname(dirname(os.path.abspath(__file__))))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'nxo_1n7ny)8av+hkuf73q@#86yzclolw2%n9r0-xm-#hc^s7^b'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY') or SECRET_KEY
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -87,7 +89,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'ja'
 
-TIME_ZONE = 'Asia/Tokyo'
+TIME_ZONE = os.environ.get('TIME_ZONE') or 'Asia/Tokyo'
 
 USE_I18N = True
 
