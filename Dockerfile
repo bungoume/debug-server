@@ -1,6 +1,4 @@
-FROM python:3.5.0-onbuild
-
-RUN pip install uWSGI
+FROM python:3.6.5-onbuild
 
 EXPOSE 80
 
