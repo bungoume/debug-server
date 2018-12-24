@@ -1,4 +1,4 @@
-FROM python:3.6.5-onbuild
+FROM python:3.7.1-onbuild
 
 EXPOSE 80
 
